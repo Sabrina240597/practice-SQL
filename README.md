@@ -177,4 +177,19 @@ SELECT concat(e.empleado_nombre, ' ', e.empleado_apellido) AS nombre_empleado, e
 FROM empleados
 
 
+18) insaertar datos de tabla y cambiar tipos los tipos de datos de VENTAS_POR_FACTURA a la tabla TABLA_NUEVA
+
+INSERT INTO tabla_nueva
+(numero_factura, fecha_factura, id_cliente, Pais, Cantidad, Monto)
+SELECT 
+    n_de_factura, 
+    CONVERT(datetime2(7), fecha_de_factura), 
+    CAST(coalesce(id_cliente, '0') as int), 
+    País,
+    CAST(Cantidad AS INT), 
+    cast(replace(monto, ',', '.') as decimal)
+FROM ventas_por_factura;
+
+select *
+from tabla_nueva
 
