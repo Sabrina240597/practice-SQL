@@ -177,7 +177,7 @@ SELECT concat(e.empleado_nombre, ' ', e.empleado_apellido) AS nombre_empleado, e
 FROM empleados
 
 
-18) insaertar datos de tabla y cambiar tipos los tipos de datos de VENTAS_POR_FACTURA a la tabla TABLA_NUEVA
+18) insertar datos de tabla y cambiar tipos los tipos de datos de VENTAS_POR_FACTURA a la tabla TABLA_NUEVA
 
 INSERT INTO tabla_nueva
 (numero_factura, fecha_factura, id_cliente, Pais, Cantidad, Monto)
